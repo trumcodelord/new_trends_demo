@@ -7,7 +7,7 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="Bảng điều khiển phát hiện xu hướng tin tức",
+    page_title="Phát hiện xu hướng tin tức",
     page_icon="📰",
     layout="wide",
     initial_sidebar_state="expanded",
