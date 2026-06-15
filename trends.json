@@ -1,0 +1,3089 @@
+{
+  "project_name": "News Trend Detection",
+  "generated_at": "2026-06-15T12:43:36",
+  "model": {
+    "embedding_model": "BAAI/bge-m3",
+    "llm_model": "Qwen/Qwen2.5-7B-Instruct",
+    "quantization": "4-bit"
+  },
+  "metrics": {
+    "total_rss_articles": "N/A",
+    "total_scraped_articles": 1066,
+    "num_clusters": 22,
+    "noise_ratio": 0.726079,
+    "weighted_coherence": "N/A"
+  },
+  "trends": [
+    {
+      "cluster_id": 12,
+      "trend_name": "Arteta thay đổi Arsenal thế nào để vô địch?",
+      "article_count": 44,
+      "trend": "Arteta thay đổi Arsenal thế nào để vô địch?",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Arteta thay đổi Arsenal thế nào để vô địch?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chelsea kiện Man City 'đi đêm' với HLV Maresca",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cầu thủ Arsenal vỡ òa khi vô địch Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arsenal vô địch Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "7 điểm nhấn vòng 37 Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Arteta thay đổi Arsenal thế nào để vô địch?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chelsea kiện Man City 'đi đêm' với HLV Maresca",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cầu thủ Arsenal vỡ òa khi vô địch Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arsenal vô địch Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "7 điểm nhấn vòng 37 Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "10 bước ngoặt đưa Arsenal tới ngôi vương Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tranh cãi khi Havert thoát thẻ đỏ trong trận thắng của Arsenal",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Man City hết cửa vô địch Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Guardiola - người thay đổi dòng chảy bóng đá Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Guardiola không muốn được dựng tượng ở Man City",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Man City đạt thỏa thuận bổ nhiệm HLV Maresca",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lần 'đùa giỡn' cuối cùng của Guardiola ở Man City",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Guardiola chúc mừng Arsenal vô địch",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Truyền thông Anh: 'Guardiola rời Man City vào cuối mùa'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tottenham lỡ bước trong cuộc đua trụ lại Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arsenal tiến sát ngôi vương Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arteta: 'Tôi sẽ là CĐV nhiệt thành nhất của Bournemouth'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Từ kẻ về nhì vĩ đại thành ‘nhà vua’: Arsenal thay đổi thế nào dưới thời Mikel Arteta?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Man City tự ‘bắn vào chân’, Arsenal được dâng sớm chức vô địch Ngoại hạng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Pep Guardiola gây sốc, chia tay Man City",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tottenham tiếp tục mạch thần kỳ?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Manchester City chọn xong truyền nhân của Pep Guardiola cho 'ghế nóng' Etihad?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Pep Guardiola và 10 năm thay đổi lịch sử Manchester City",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Fan đội nào buồn phiền nhất sau khi Arsenal vô địch?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thua trận, Tottenham đối diện nguy cơ rớt hạng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chelsea chuẩn bị khởi kiện Man City vì 'đi đêm' với HLV Maresca",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cổ động viên Arsenal 'thị uy' sau chức vô địch",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Pep Guardiola: 'Arsenal xứng đáng với chức vô địch'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Các ngôi sao Arsenal ăn mừng cuồng nhiệt sau chức vô địch",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vòng 25 Premier League: M.U bỏ lỡ cơ hội vàng để đuổi Chelsea",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arsenal chính thức vô địch nước Anh sau hơn 20 năm chờ đợi",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thắng đậm Man Utd tại Old Trafford, Man City đặt một chân vào Chung kết Carabao",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arsenal và chức vô địch của nhiều cung bậc cảm xúc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vòng 24 Ngoại hạng Anh: HLV Frank Lampard hài lòng với 1 điểm trước Arsenal",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cựu HLV Chelsea sẽ thay thế Pep Guardiola dẫn dắt Man City?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vòng 3 FA Cup: Man City thắng đậm, Man Utd tự đưa mình vào thế khó",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Pep Guardiola chính thức chia tay Man City sau 10 năm rực rỡ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Pep Guardiola, người yêu công việc đến mức bị... vợ bỏ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thua Man City với tỷ số không tưởng, đội bóng của John Terry lâm nguy",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Liverpool giải mã “hiện tượng” Sheffield, bảng xếp hạng Premier League mới nhất",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Giành quyền vào vòng 4 FA Cup, Arsenal sẽ lại gặp đối thủ đến từ Premier League",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lịch thi đấu vòng 22 Premier League: Tottenham vs Liverpool sẽ là trận tâm điểm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Liverpool lập những kỷ lục khó tin, HLV Jose Mourinho đổ lỗi cho trọng tài VAR",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Arsenal chỉ còn cách ngôi vô địch 1 trận thắng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "cluster_id": 8,
+      "trend_name": "Tiêm kích NATO phóng tên lửa hạ UAV Ukraine tại Estonia",
+      "article_count": 32,
+      "trend": "Tiêm kích NATO phóng tên lửa hạ UAV Ukraine tại Estonia",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Tiêm kích NATO phóng tên lửa hạ UAV Ukraine tại Estonia",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "UAV Nga đánh trúng tàu hàng có thủy thủ Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chiến sự Ukraine ngày 1.546: Thành viên NATO lần đầu bắn hạ UAV Ukraine 'đi lạc'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chiến sự Ukraine ngày 1.545: Nga đánh trả dữ dội nhưng đề nghị khôi phục đàm phán",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "NATO lần đầu bắn hạ drone nghi của Ukraine tại Estonia, Kiev gửi lời xin lỗi",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Tiêm kích NATO phóng tên lửa hạ UAV Ukraine tại Estonia",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "UAV Nga đánh trúng tàu hàng có thủy thủ Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chiến sự Ukraine ngày 1.546: Thành viên NATO lần đầu bắn hạ UAV Ukraine 'đi lạc'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chiến sự Ukraine ngày 1.545: Nga đánh trả dữ dội nhưng đề nghị khôi phục đàm phán",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "NATO lần đầu bắn hạ drone nghi của Ukraine tại Estonia, Kiev gửi lời xin lỗi",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video HIMARS Ukraine bắn nổ pháo ‘cuồng phong’ Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video tên lửa đạn đạo Nga bắn nổ 2 hệ thống HIMARS của Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video quân đội Nga bắn nổ 2 trực thăng của Ukraine ở Donetsk",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Xung đột Nga - Ukraine: Drone thách thức logic quân sự truyền thống",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nga liên tiếp phóng UAV và tên lửa, nhiều khu vực ở Ukraine báo động không kích",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video trực thăng tấn công Nga dội lửa xuống mục tiêu Ukraine gần Kupyansk",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lính Nga cảm ơn Tổng thống Mỹ gửi xe tăng Abrams cho Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video Nga phá hủy hệ thống phòng không Đức viện trợ cho Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Dàn tên lửa hiện đại của Nga trở thành ‘khắc tinh’ của F-16 ở Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "FPV Nga truy đuổi, hạ gục xe tăng Mỹ viện trợ cho Ukraine trong đêm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video xe chiến đấu bộ binh Bradley của Ukraine tập kích cứ điểm Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video quân đội Ukraine phá tung pháo tự hành Nga ở Luhansk",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video Nga công phá 2 hệ thống tên lửa Mỹ ở tây nam Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Khoảnh khắc lính dù Nga bắn hạ UAV 'khủng' của Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video lính dù Nga bắn hạ UAV 'Ma cà rồng' của Ukraine gần Bakhmut",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video tiêm kích Israel bắn hạ UAV của Houthi trên Biển Đỏ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video UAV Nga phóng lưới 'tóm gọn' UAV của Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video Ukraine phóng tên lửa nước ngoài, phá hủy S-400 của Nga ở Donetsk",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chiến thuật 'màn khói' giúp Nga vượt mặt UAV trinh sát của Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "UAV Ukraine bắn tung xe tăng trị giá 3,5 triệu USD của Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video lữ đoàn biệt kích Ukraine vô hiệu hóa xe tăng ‘mai rùa’ Nga bằng UAV",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Khoảnh khắc UAV cảm tử Nga làm nổ tung trạm liên lạc Starlink của Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vũ khí giúp Nga phá hủy xe tăng Abrams đầu tiên của Mỹ ở Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lý do Nga không thể ngăn xuồng không người lái Ukraine tấn công tàu chiến",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video quân đội Nga bắn cháy xe tăng Abrams thứ 4 của Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Video UAV Ukraine tập kích xe tăng T-90 và xe bọc thép hiếm của Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hình ảnh quân Nga nã đạn chùm vào vị trí hệ thống HIMARS Ukraine",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "cluster_id": 7,
+      "trend_name": "Trung Quốc bắn 21 loạt đại bác chào đón ông Putin",
+      "article_count": 21,
+      "trend": "Trung Quốc bắn 21 loạt đại bác chào đón ông Putin",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Trung Quốc bắn 21 loạt đại bác chào đón ông Putin",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nụ hôn của ông Putin định hướng cuộc sống của cậu bé Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trung Quốc củng cố vị thế khi liên tiếp đón Tổng thống Mỹ - Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "'Bộ ba hạt nhân' của Nga diễn tập bắn đạn thật",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tầm nhìn thực tế giúp Mỹ - Trung tránh đối đầu",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Trung Quốc bắn 21 loạt đại bác chào đón ông Putin",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nụ hôn của ông Putin định hướng cuộc sống của cậu bé Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trung Quốc củng cố vị thế khi liên tiếp đón Tổng thống Mỹ - Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "'Bộ ba hạt nhân' của Nga diễn tập bắn đạn thật",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tầm nhìn thực tế giúp Mỹ - Trung tránh đối đầu",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Belarus diễn tập triển khai vũ khí hạt nhân chiến thuật",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đoàn CEO hàng đầu Nga tháp tùng ông Putin đến Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Putin đến Bắc Kinh, bắt đầu thăm Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Tập Cận Bình đón tiếp ông Putin tại Bắc Kinh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Putin đến Bắc Kinh, bắt đầu chuyến công du Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thế cuộc Mỹ - Trung - Nga khi ông Putin thăm Bắc Kinh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nhà Trắng tổng kết thành quả 'lịch sử' sau chuyến thăm Trung Quốc của ông Trump",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tổng thống Nga Vladimir Putin nói gì trước chuyến thăm Trung Quốc?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Putin đến Trung Quốc, Ngoại trưởng Vương Nghị ra sân bay đón",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Putin nói về quan hệ Nga - Trung: 'Một ngày không gặp tựa ba thu'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tam giác lớn Mỹ - Trung - Nga",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nga - Belarus diễn tập hạt nhân, Ukraine kêu gọi phương Tây trừng phạt",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Dàn CEO hàng đầu nước Nga tháp tùng Tổng thống Putin đến Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nga huy động 65.000 quân tập trận hạt nhân giữa lúc ông Putin thăm Trung Quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tổng thống Putin nói Nga sẵn sàng cho cuộc chiến hạt nhân",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Putin công du nước nào đầu tiên sau khi tái đắc cử?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "cluster_id": 5,
+      "trend_name": "Ông Trump tuyên bố hoãn kế hoạch tấn công Iran",
+      "article_count": 17,
+      "trend": "Ông Trump tuyên bố hoãn kế hoạch tấn công Iran",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Ông Trump tuyên bố hoãn kế hoạch tấn công Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump: Mỹ có thể tập kích Iran trong những ngày tới",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thượng viện Mỹ thúc đẩy nghị quyết siết quyền lực chiến tranh của ông Trump với Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Iran phản hồi đề xuất hòa bình của Mỹ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ngày ông Trump đe dọa rồi đổi ý với Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Ông Trump tuyên bố hoãn kế hoạch tấn công Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump: Mỹ có thể tập kích Iran trong những ngày tới",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thượng viện Mỹ thúc đẩy nghị quyết siết quyền lực chiến tranh của ông Trump với Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Iran phản hồi đề xuất hòa bình của Mỹ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ngày ông Trump đe dọa rồi đổi ý với Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Pakistan tìm cách cứu kênh đối thoại Mỹ - Iran",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump nói Mỹ có thể tấn công Iran lần nữa, Tehran tuyên bố cứng rắn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Mỹ ngừng tấn công Iran để đàm phán",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump cảnh báo Iran: thời gian đang dần cạn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Iran phản hồi đề xuất hòa bình mới nhất của Mỹ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump nói Mỹ hoãn đánh Iran theo đề nghị của các đồng minh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Iran dọa mở thêm 'mặt trận mới' nếu Mỹ tái tấn công",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Vance: Cuộc chiến với Iran sẽ không kéo dài bất tận",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trung Đông sáng 20-5: Mỹ - Iran tiếp tục đấu khẩu, liên tục thay đổi mục tiêu trong đàm phán",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thượng viện Mỹ 'nhắc nhở' ông Trump về quyền lực chiến tranh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hơn 12 tuần chiến sự: Ông Trump đã bao nhiêu lần lùi hạn tấn công với Iran?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tin tức thế giới 19-5: Ông Trump tuyên bố hoãn tấn công Iran; Cuba cảnh báo về cuộc 'tắm máu'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "cluster_id": 13,
+      "trend_name": "Tiền vệ Bồ Đào Nha muốn vô địch World Cup 2026 vì Ronaldo",
+      "article_count": 16,
+      "trend": "Tiền vệ Bồ Đào Nha muốn vô địch World Cup 2026 vì Ronaldo",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Tiền vệ Bồ Đào Nha muốn vô địch World Cup 2026 vì Ronaldo",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ancelotti không muốn bị mê hoặc bởi hoài niệm về Brazil",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ronaldo lần thứ sáu dự World Cup",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Neymar được triệu tập dự World Cup 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Modric dự World Cup lần thứ năm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Tiền vệ Bồ Đào Nha muốn vô địch World Cup 2026 vì Ronaldo",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ancelotti không muốn bị mê hoặc bởi hoài niệm về Brazil",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ronaldo lần thứ sáu dự World Cup",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Neymar được triệu tập dự World Cup 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Modric dự World Cup lần thứ năm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Sao Chelsea lên tiếng sau quyết định gây tranh cãi của HLV Ancelotti, bị gạch tên khỏi đội tuyển Brazil",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Neymar rất khó hiểu, HLV Ancelotti sẽ phải làm sao?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Messi đã được thông báo dự World Cup",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đội tuyển Bồ Đào Nha chốt danh sách dự World Cup: Chờ Ronaldo đi vào lịch sử!",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đội tuyển Bồ Đào Nha chốt danh sách World Cup 2026: Bất ngờ với Ronaldo?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Gây tranh cãi: HLV Ancelotti loại ngôi sao của Chelsea, chọn Neymar dự World Cup 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Neymar vẫn dự World Cup 2026, HLV Ancelotti giải thích lý do bất ngờ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ronaldo lập kỷ lục dự World Cup lần thứ 6 cùng tuyển Bồ Đào Nha",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Cristiano Roland: Nếu chuẩn bị tốt, U17 Việt Nam đủ tự tin đá World Cup",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Neymar chính thức dự World Cup, 1 ngôi sao Brazil khác bị gạch tên",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "CĐV Brazil vỡ òa, bật khóc trong ngày Neymar được gọi trở lại đội tuyển",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "cluster_id": 17,
+      "trend_name": "Google ra mắt Omni - mô hình có thể 'sáng tạo mọi thứ'",
+      "article_count": 16,
+      "trend": "Google ra mắt Omni - mô hình có thể 'sáng tạo mọi thứ'",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Google ra mắt Omni - mô hình có thể 'sáng tạo mọi thứ'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Google ra mô hình Gemini 3.5, thúc đẩy dùng AI agent",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thách thức ChatGPT, Google vừa biến Gemini thành AI biết 'tự làm việc'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Người dùng miễn phí Gemini sắp gặp hạn chế lớn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cú sốc từ loạt nghiên cứu mới về việc AI gây loạn thần",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Google ra mắt Omni - mô hình có thể 'sáng tạo mọi thứ'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Google ra mô hình Gemini 3.5, thúc đẩy dùng AI agent",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thách thức ChatGPT, Google vừa biến Gemini thành AI biết 'tự làm việc'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Người dùng miễn phí Gemini sắp gặp hạn chế lớn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cú sốc từ loạt nghiên cứu mới về việc AI gây loạn thần",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Google Gemini sắp có chế độ 'tăng IQ' cho AI",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lộ diện Gemini Spark: 'Vũ khí bí mật' giúp Google lật đổ Claude",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Google ra mắt Android 17: AI Gemini tự đặt xe, lọc tin nhắn, chống nghiện lướt mạng xã hội",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Siri có thể tích hợp ChatGPT, Gemini trên iOS 27",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Google Finance tích hợp AI: Người dùng phổ thông cũng có thể đầu tư như chuyên gia",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Deepfake lan rộng, cuộc đua AI ‘lấy độc trị độc’ nóng lên",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "YouTube thử nghiệm tạo ‘bản sao AI’ người dùng, tiện lợi đi kèm rủi ro giả mạo",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Người dùng Gemini được dùng miễn phí Notebooks",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Google Maps tích hợp Gemini, tự động tạo mô tả ảnh cho người dùng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cảnh báo lỗ hổng Google Gemini trong ứng dụng Android, nguy cơ phát sinh chi phí lớn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đề xuất ứng dụng các giải pháp tự động hóa thông minh cho ngành Tài chính",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 6
+    },
+    {
+      "cluster_id": 18,
+      "trend_name": "Thúc đẩy phát triển “kỳ lân” công nghệ số Việt Nam",
+      "article_count": 16,
+      "trend": "Thúc đẩy phát triển “kỳ lân” công nghệ số Việt Nam",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Thúc đẩy phát triển “kỳ lân” công nghệ số Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Công nghiệp công nghệ số sẽ là ngành đi đầu trong cách mạng 4.0",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Việt Nam đã có 70.000 doanh nghiệp công nghệ số",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nền tảng Hue-S đạt giải thưởng Sản phẩm công nghệ số Make in Vietnam 2022",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bộ TT&TT gia hạn nộp hồ sơ giải thưởng sản phẩm Make in Vietnam 2022",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Thúc đẩy phát triển “kỳ lân” công nghệ số Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Công nghiệp công nghệ số sẽ là ngành đi đầu trong cách mạng 4.0",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Việt Nam đã có 70.000 doanh nghiệp công nghệ số",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nền tảng Hue-S đạt giải thưởng Sản phẩm công nghệ số Make in Vietnam 2022",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bộ TT&TT gia hạn nộp hồ sơ giải thưởng sản phẩm Make in Vietnam 2022",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đã có thêm hơn 500 doanh nghiệp công nghệ số Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Giải thưởng sản phẩm Make in Vietnam 2022 có hơn 200 hồ sơ tham gia",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Doanh nghiệp Việt ngày càng hoàn thiện về trình độ công nghệ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Diễn đàn Make in Vietnam mở ra giai đoạn mới cho doanh nghiệp công nghệ số",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Doanh nghiệp công nghệ số Việt Nam có sứ mệnh quốc gia lớn lao",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Khẩn trương hoàn thiện hồ sơ đề nghị xây dựng Luật Công nghiệp công nghệ số",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trao 52 giải thưởng “Sản phẩm Công nghệ số Make in Vietnam” năm 2022",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thiết bị 5G do Việt Nam nghiên cứu và sản xuất đã sẵn sàng thương mại hóa",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Doanh nghiệp Việt trình diễn nhiều sản phẩm công nghệ tại triển lãm quốc phòng quốc tế",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "9 sản phẩm an toàn thông tin Make in Vietnam chất lượng cao và triển vọng xuất sắc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Công nghiệp CNTT là một trong vài lực lượng quyết định để đạt mục tiêu phát triển đất nước",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 7
+    },
+    {
+      "cluster_id": 14,
+      "trend_name": "Nguyễn Quang Hải: “U23 Việt Nam sẽ chiến đấu hết mình và đang quyết tâm rất cao\"",
+      "article_count": 14,
+      "trend": "Nguyễn Quang Hải: “U23 Việt Nam sẽ chiến đấu hết mình và đang quyết tâm rất cao\"",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Nguyễn Quang Hải: “U23 Việt Nam sẽ chiến đấu hết mình và đang quyết tâm rất cao\"",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "AFC \"mách nước\" cho thầy trò HLV Park Hang Seo trước trận đấu với U23 Triều Tiên",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đình Trọng: \"Chúng tôi có cơ hội để bước vào vòng tiếp theo\"",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hòa 0-0 trước U23 Jordan, thầy trò HLV Park Hang Seo mất quyền tự quyết",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đội hình dự kiến U23 Việt Nam gặp U23 UAE chiều nay",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Nguyễn Quang Hải: “U23 Việt Nam sẽ chiến đấu hết mình và đang quyết tâm rất cao\"",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "AFC \"mách nước\" cho thầy trò HLV Park Hang Seo trước trận đấu với U23 Triều Tiên",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đình Trọng: \"Chúng tôi có cơ hội để bước vào vòng tiếp theo\"",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hòa 0-0 trước U23 Jordan, thầy trò HLV Park Hang Seo mất quyền tự quyết",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đội hình dự kiến U23 Việt Nam gặp U23 UAE chiều nay",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Park Hang Seo nói gì trong buổi họp báo trước trận gặp U23 UAE?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "20h15' ngày 13/1, U23 Việt Nam - U23 Jordan: Sẽ có 3 điểm trước đội bóng Tây Á?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Xem trực tiếp U23 Việt Nam vs U23 Jordan tối nay trên kênh nào?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Park Hang Seo: \"Ở trận đấu cuối cùng, U23 Việt Nam cần một chiến thắng\"",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Giao hữu trước thềm VCK U23 châu Á 2020: U23 Việt Nam thua U23 Bahrain 1-2",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Báo Hàn Quốc lo ngại cho khả năng tiến xa của U23 Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV Park Hang Seo chốt danh sách U23 Việt Nam, Đình Trọng chính thức ở lại",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đình Trọng vẫn còn cơ hội cuối tham dự VCK U23 châu Á",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Park tin vào kinh nghiệm đối đầu các đội bóng Tây Á",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 8
+    },
+    {
+      "cluster_id": 10,
+      "trend_name": "Xác định 4 đội vào bán kết giải bóng đá nữ Cúp quốc gia: Hứa hẹn hấp dẫn",
+      "article_count": 13,
+      "trend": "Xác định 4 đội vào bán kết giải bóng đá nữ Cúp quốc gia: Hứa hẹn hấp dẫn",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Xác định 4 đội vào bán kết giải bóng đá nữ Cúp quốc gia: Hứa hẹn hấp dẫn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cuộc cách mạng bóng đá nữ Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "48 đội tham dự giải bóng đá công nhân, viên chức Việt Nam 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lộ diện bảng đấu Giải bóng đá công nhân, viên chức 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VFF sẽ nâng cao chất lượng chuyên môn Giải bóng đá công nhân, viên chức Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Xác định 4 đội vào bán kết giải bóng đá nữ Cúp quốc gia: Hứa hẹn hấp dẫn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cuộc cách mạng bóng đá nữ Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "48 đội tham dự giải bóng đá công nhân, viên chức Việt Nam 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lộ diện bảng đấu Giải bóng đá công nhân, viên chức 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VFF sẽ nâng cao chất lượng chuyên môn Giải bóng đá công nhân, viên chức Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bóng đá nữ Việt Nam chuẩn bị bước lên tầm cao mới",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Ngọ Duy Hiểu: Bóng đá cần trở thành một phần đời sống của công nhân",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trọng tài FIFA điều hành Giải bóng đá công nhân, viên chức Việt Nam 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "10 điểm nhấn tại Giải bóng đá công nhân, viên chức Việt Nam 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Phó chủ tịch VFF Trần Anh Tú: Giải bóng đá công nhân, viên chức Việt Nam ngày càng vươn tầm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Công nhân thép, bác sĩ, thợ may hội quân đá giải công đoàn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bắc Ninh lập 3 đội bóng từ các 'ông lớn' điện tử toàn cầu đấu giải công nhân",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Giải bóng đá công nhân, viên chức Việt Nam 2026: Háo hức chờ ngày tranh tài",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "cluster_id": 20,
+      "trend_name": "Hơn 1.500 học sinh TP HCM được tuyển thẳng vào lớp 10",
+      "article_count": 13,
+      "trend": "Hơn 1.500 học sinh TP HCM được tuyển thẳng vào lớp 10",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Hơn 1.500 học sinh TP HCM được tuyển thẳng vào lớp 10",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "TP.HCM có 1.515 thí sinh được tuyển thẳng lớp 10, là những học sinh nào?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nhiều giải pháp mạnh để nâng cao kết quả thi tốt nghiệp THPT",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thi đại trà lớp 10 có mâu thuẫn với tinh thần phổ cập giáo dục?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "45.263 lượt điều chỉnh nguyện vọng vào lớp 10 ở TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Hơn 1.500 học sinh TP HCM được tuyển thẳng vào lớp 10",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "TP.HCM có 1.515 thí sinh được tuyển thẳng lớp 10, là những học sinh nào?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nhiều giải pháp mạnh để nâng cao kết quả thi tốt nghiệp THPT",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thi đại trà lớp 10 có mâu thuẫn với tinh thần phổ cập giáo dục?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "45.263 lượt điều chỉnh nguyện vọng vào lớp 10 ở TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bỏ thi lớp 10: Đúng hướng đổi mới giáo dục, nhưng cần chuẩn bị kỹ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Từng mở rộng xét tuyển lớp 10 ở 9 quận, huyện, TP.HCM vì sao quay lại thi tuyển?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bỏ thi lớp 10: Minh bạch dữ liệu mới tránh được cuộc đua điểm số",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chọn môn thi tốt nghiệp THPT của học sinh TP.HCM ra sao so với năm trước?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thủ tướng Chính phủ: Kỳ thi tốt nghiệp THPT phải cung cấp dữ liệu tin cậy cho xét tuyển đại học",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bỏ thi lớp 10 liệu có hết áp lực?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "TP.HCM: Tuyển bổ sung 38 chỉ tiêu vào lớp 10 tích hợp",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "TP HCM tuyển bổ sung hơn 100 suất lớp 10 chuyên",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 10
+    },
+    {
+      "cluster_id": 1,
+      "trend_name": "'Cô gái đẹp nhất thế giới' diện váy tôn đường cong ở Cannes",
+      "article_count": 11,
+      "trend": "'Cô gái đẹp nhất thế giới' diện váy tôn đường cong ở Cannes",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "'Cô gái đẹp nhất thế giới' diện váy tôn đường cong ở Cannes",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hương Giang: 'Sẵn sàng chinh phục Miss Grand International'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vợ sắp cưới Ronaldo gợi cảm ở Cannes",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hoa hậu Hòa bình diện đầm 'Nước mắt màn đêm' của Nguyễn Minh Tuấn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hương Giang thi diễn áo tắm tại Miss Grand International",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "'Cô gái đẹp nhất thế giới' diện váy tôn đường cong ở Cannes",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hương Giang: 'Sẵn sàng chinh phục Miss Grand International'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vợ sắp cưới Ronaldo gợi cảm ở Cannes",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hoa hậu Hòa bình diện đầm 'Nước mắt màn đêm' của Nguyễn Minh Tuấn",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hương Giang thi diễn áo tắm tại Miss Grand International",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Diễn viên Pháp 'mặc như không' bên dàn sao Cannes",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vị hôn thê của Ronaldo khoe sắc vóc nóng bỏng ở Cannes",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hôn nhân ngọt ngào của Selena Gomez và 'phù thủy âm nhạc' Benny Blanco",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Hương Giang diện đầm nặng 19kg lên sân khấu MGI All Stars 2026, thần thái như final walk",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đầm Việt lại xuất hiện ở Cannes 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vừa nhập cuộc MGI All Stars, Hương Giang được dự đoán đăng quang",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 11
+    },
+    {
+      "cluster_id": 2,
+      "trend_name": "Hồng Ngọc: 'Tôi chọn cách sống chậm'",
+      "article_count": 10,
+      "trend": "Hồng Ngọc: 'Tôi chọn cách sống chậm'",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Hồng Ngọc: 'Tôi chọn cách sống chậm'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cuộc sống của Hồng Nhung trong penthouse 650 m2",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thanh Thúy tiết lộ hôn nhân với Đức Thịnh sau 18 năm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nữ diễn viên phim giờ vàng tiết lộ cuộc sống hôn nhân với chồng kém tuổi",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nam ca sĩ từng muốn bỏ nghề, giờ sống viên mãn bên vợ và 5 con",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Hồng Ngọc: 'Tôi chọn cách sống chậm'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cuộc sống của Hồng Nhung trong penthouse 650 m2",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Thanh Thúy tiết lộ hôn nhân với Đức Thịnh sau 18 năm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nữ diễn viên phim giờ vàng tiết lộ cuộc sống hôn nhân với chồng kém tuổi",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nam ca sĩ từng muốn bỏ nghề, giờ sống viên mãn bên vợ và 5 con",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nữ ca sĩ vực dậy sau 3 năm vắng bóng, tiết lộ niềm hạnh phúc tuổi 40",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chuyện showbiz: Ngọc Lan \"lột xác\" đẹp hút mắt sau khi ly hôn Thanh Bình",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Khám phá căn nhà \"siêu to, siêu khổng lồ\" của Hoàng Thùy Linh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Loạt mỹ nhân Việt quá \"deadline\" kết hôn, sinh con trước tuổi 30",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Những sao Việt đam mê làm vườn, thu hoạch rau trái như nông dân thực thụ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "cluster_id": 15,
+      "trend_name": "Trung Quốc vào chung kết U17 châu Á 2026",
+      "article_count": 10,
+      "trend": "Trung Quốc vào chung kết U17 châu Á 2026",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Trung Quốc vào chung kết U17 châu Á 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV U.17 Trung Quốc bình tĩnh lạ thường, HLV U.17 Úc thừa nhận sự thật đau lòng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Báo Trung Quốc khen nức nở U.17 quá hay, dự báo Nhật Bản phải lo lắng ở chung kết",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "U.17 Trung Quốc xuất sắc đánh bại U.17 Úc, đấu U.17 Nhật Bản tranh chức vô địch châu Á",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Báo Nhật Bản sung sướng vì U.17 vào chung kết ngoạn mục, đòi có VAR ngay lập tức",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Trung Quốc vào chung kết U17 châu Á 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "HLV U.17 Trung Quốc bình tĩnh lạ thường, HLV U.17 Úc thừa nhận sự thật đau lòng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Báo Trung Quốc khen nức nở U.17 quá hay, dự báo Nhật Bản phải lo lắng ở chung kết",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "U.17 Trung Quốc xuất sắc đánh bại U.17 Úc, đấu U.17 Nhật Bản tranh chức vô địch châu Á",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Báo Nhật Bản sung sướng vì U.17 vào chung kết ngoạn mục, đòi có VAR ngay lập tức",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bị tước bàn thắng oan uổng, U.17 Nhật Bản vẫn hạ U.17 Uzbekistan để vào chung kết châu Á",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "U.17 Việt Nam phải làm gì để không bị ‘quăng quật’ tại World Cup: Bài học từ U.23 Việt Nam",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "U17 Trung Quốc tiếp tục gây bất ngờ, vào chung kết gặp U17 Nhật Bản",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VCK U23 Châu Á 2020: U23 Hàn Quốc thắng nhọc U23 Trung Quốc ở... phút bù giờ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lịch trực tiếp bán kết U17 châu Á 2026: Trung Quốc đấu Úc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "cluster_id": 0,
+      "trend_name": "Phim của IU bị chỉ trích 'sai lệch lịch sử'",
+      "article_count": 9,
+      "trend": "Phim của IU bị chỉ trích 'sai lệch lịch sử'",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Phim của IU bị chỉ trích 'sai lệch lịch sử'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bất chấp phản đối, IU vẫn bỏ túi 105 tỉ đồng từ dự án 'Perfect Crown'?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "IU và Byeon Woo Seok xin lỗi sau khi bom tấn bị tố 'sai lệch lịch sử'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bom tấn của IU bị chỉ trích vì 'sai lệch lịch sử'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đạo diễn Perfect Crown cúi đầu xin lỗi vì tranh cãi xuyên tạc lịch sử",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Phim của IU bị chỉ trích 'sai lệch lịch sử'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bất chấp phản đối, IU vẫn bỏ túi 105 tỉ đồng từ dự án 'Perfect Crown'?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "IU và Byeon Woo Seok xin lỗi sau khi bom tấn bị tố 'sai lệch lịch sử'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bom tấn của IU bị chỉ trích vì 'sai lệch lịch sử'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đạo diễn Perfect Crown cúi đầu xin lỗi vì tranh cãi xuyên tạc lịch sử",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "IU và Byeon Woo Seok xin lỗi vì tranh cãi xuyên tạc lịch sử của Perfect Crown",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lộ cát sê Dương Dương cho vai Triển Chiêu trong Vũ Lâm Linh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Rating Perfect Crown chạm đỉnh khi khép lại, bất chấp chỉ trích xuyên tạc lịch sử",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lee Min Ho bị chê diễn đơ, Kim Go Eun chưa thoát bóng \"Goblin\"?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 14
+    },
+    {
+      "cluster_id": 11,
+      "trend_name": "Giá Bitcoin hôm nay 18.5.2026: Thủng đáy 77.000 USD khi bóng ma lạm phát bao trùm",
+      "article_count": 9,
+      "trend": "Giá Bitcoin hôm nay 18.5.2026: Thủng đáy 77.000 USD khi bóng ma lạm phát bao trùm",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Giá Bitcoin hôm nay 18.5.2026: Thủng đáy 77.000 USD khi bóng ma lạm phát bao trùm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VN-Index biến động 'như tàu lượn'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nhà đầu tư nên làm gì khi chứng khoán lên cao kỷ lục?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cổ phiếu của doanh nghiệp nhà nước 'dậy sóng'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VN-Index không chinh phục được mốc 1.950 điểm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Giá Bitcoin hôm nay 18.5.2026: Thủng đáy 77.000 USD khi bóng ma lạm phát bao trùm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VN-Index biến động 'như tàu lượn'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nhà đầu tư nên làm gì khi chứng khoán lên cao kỷ lục?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cổ phiếu của doanh nghiệp nhà nước 'dậy sóng'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "VN-Index không chinh phục được mốc 1.950 điểm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Giá vàng thế giới xuống thấp nhất gần 2 tuần",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Chứng khoán sáng 20-5 đỏ rực, VN-Index bay hơn 30 điểm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đọc nhanh 20-5: Lý do gì khiến giá vàng cùng chứng khoán Mỹ giảm mạnh?",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cổ phiếu dầu khí giảm hàng loạt, VN-Index 'bốc hơi' hơn 15 điểm",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 15
+    },
+    {
+      "cluster_id": 6,
+      "trend_name": "Đại học Kinh tế Quốc dân có giám đốc mới",
+      "article_count": 7,
+      "trend": "Đại học Kinh tế Quốc dân có giám đốc mới",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Đại học Kinh tế Quốc dân có giám đốc mới",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bổ nhiệm Hiệu trưởng Trường ĐH Nông lâm TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tiến sĩ Lê Trường Sơn tiếp tục được bổ nhiệm làm Hiệu trưởng Trường ĐH Luật TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bộ GD-ĐT bổ nhiệm Hiệu trưởng Trường ĐH Mở TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "PGS.TS Nguyễn Tất Toàn tiếp tục làm Hiệu trưởng Trường đại học Nông Lâm TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Đại học Kinh tế Quốc dân có giám đốc mới",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bổ nhiệm Hiệu trưởng Trường ĐH Nông lâm TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tiến sĩ Lê Trường Sơn tiếp tục được bổ nhiệm làm Hiệu trưởng Trường ĐH Luật TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bộ GD-ĐT bổ nhiệm Hiệu trưởng Trường ĐH Mở TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "PGS.TS Nguyễn Tất Toàn tiếp tục làm Hiệu trưởng Trường đại học Nông Lâm TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "TS Lê Trường Sơn được tiếp tục bổ nhiệm làm Hiệu trưởng Trường đại học Luật TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bổ nhiệm hiệu trưởng Trường đại học Mở TP.HCM",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "cluster_id": 16,
+      "trend_name": "Xem TP.HCM bình yên, đầy sức sống qua những hình ảnh đời thường",
+      "article_count": 7,
+      "trend": "Xem TP.HCM bình yên, đầy sức sống qua những hình ảnh đời thường",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Xem TP.HCM bình yên, đầy sức sống qua những hình ảnh đời thường",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Kỷ niệm ngày sinh Bác Hồ, nhìn lại những tựa sách 'vạn bản' về Bác",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ngôi trường mang tên ngày sinh Bác Hồ làm điều ý nghĩa",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Học sinh trồng cây, dâng hoa sen mừng ngày sinh Chủ tịch Hồ Chí Minh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trường phổ thông mang tên người thanh niên yêu nước Nguyễn Tất Thành kỷ niệm sinh nhật Bác",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Xem TP.HCM bình yên, đầy sức sống qua những hình ảnh đời thường",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Kỷ niệm ngày sinh Bác Hồ, nhìn lại những tựa sách 'vạn bản' về Bác",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ngôi trường mang tên ngày sinh Bác Hồ làm điều ý nghĩa",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Học sinh trồng cây, dâng hoa sen mừng ngày sinh Chủ tịch Hồ Chí Minh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Trường phổ thông mang tên người thanh niên yêu nước Nguyễn Tất Thành kỷ niệm sinh nhật Bác",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Không gian văn hóa Hồ Chí Minh: Sống động bài học về Bác trong trường học",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Học sinh dùng tiếng Anh để lan tỏa những câu chuyện về Bác Hồ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 17
+    },
+    {
+      "cluster_id": 9,
+      "trend_name": "Lịch thi đấu bán kết Cúp bóng chuyền VTV9 - Bình Điền hôm nay: Khó bất ngờ",
+      "article_count": 6,
+      "trend": "Lịch thi đấu bán kết Cúp bóng chuyền VTV9 - Bình Điền hôm nay: Khó bất ngờ",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Lịch thi đấu bán kết Cúp bóng chuyền VTV9 - Bình Điền hôm nay: Khó bất ngờ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Xác định 2 cặp bán kết Cúp bóng chuyền VTV9 - Bình Điền: Nảy lửa!",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lịch thi đấu bán kết Cúp bóng chuyền VTV9 - Bình Điền: Chờ Thanh Thúy bùng nổ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lịch trực tiếp bán kết Giải bóng chuyền Cúp VTV9 - Bình Điền ngày 20-5",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ngôi sao Việt Nam ghi điểm áp đảo VĐV Trung Quốc, Nhật Bản ở giải bóng chuyền quốc tế",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Lịch thi đấu bán kết Cúp bóng chuyền VTV9 - Bình Điền hôm nay: Khó bất ngờ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Xác định 2 cặp bán kết Cúp bóng chuyền VTV9 - Bình Điền: Nảy lửa!",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lịch thi đấu bán kết Cúp bóng chuyền VTV9 - Bình Điền: Chờ Thanh Thúy bùng nổ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Lịch trực tiếp bán kết Giải bóng chuyền Cúp VTV9 - Bình Điền ngày 20-5",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ngôi sao Việt Nam ghi điểm áp đảo VĐV Trung Quốc, Nhật Bản ở giải bóng chuyền quốc tế",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Xếp hạng vòng bảng Giải bóng chuyền Cúp VTV9 - Bình Điền 2026",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 18
+    },
+    {
+      "cluster_id": 19,
+      "trend_name": "'ĐH Quốc gia Hà Nội phải trở thành trụ cột học thuật hàng đầu'",
+      "article_count": 6,
+      "trend": "'ĐH Quốc gia Hà Nội phải trở thành trụ cột học thuật hàng đầu'",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "'ĐH Quốc gia Hà Nội phải trở thành trụ cột học thuật hàng đầu'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tháo gỡ các điểm nghẽn về thể chế để đại học quốc gia phát triển",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Muốn vươn lên, Việt Nam phải tái định nghĩa đại học",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đại học Quốc gia Hà Nội phải trở thành trung tâm tinh hoa, đổi mới sáng tạo",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đại học Quốc gia Hà Nội: Sứ mệnh ươm dưỡng nhân tài phụng sự Tổ quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "'ĐH Quốc gia Hà Nội phải trở thành trụ cột học thuật hàng đầu'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tháo gỡ các điểm nghẽn về thể chế để đại học quốc gia phát triển",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Muốn vươn lên, Việt Nam phải tái định nghĩa đại học",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đại học Quốc gia Hà Nội phải trở thành trung tâm tinh hoa, đổi mới sáng tạo",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Đại học Quốc gia Hà Nội: Sứ mệnh ươm dưỡng nhân tài phụng sự Tổ quốc",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Cơ hội cho đổi thay giáo dục đại học",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 19
+    },
+    {
+      "cluster_id": 21,
+      "trend_name": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Phần lý thuyết chiếm nhiều điểm môn sinh",
+      "article_count": 6,
+      "trend": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Phần lý thuyết chiếm nhiều điểm môn sinh",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Phần lý thuyết chiếm nhiều điểm môn sinh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Kiến thức về thế điện cực",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Ứng dụng của vật lý hạt nhân",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Kỹ năng biểu đồ và tính toán",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Văn bản - quảng cáo tiếng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Phần lý thuyết chiếm nhiều điểm môn sinh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Kiến thức về thế điện cực",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Ứng dụng của vật lý hạt nhân",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Kỹ năng biểu đồ và tính toán",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Văn bản - quảng cáo tiếng Anh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Bí quyết ôn thi tốt nghiệp THPT đạt điểm cao: Cách tính góc và khoảng cách",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 20
+    },
+    {
+      "cluster_id": 4,
+      "trend_name": "IRS bị cấm điều tra ông Trump và gia đình về vấn đề thuế trong quá khứ",
+      "article_count": 5,
+      "trend": "IRS bị cấm điều tra ông Trump và gia đình về vấn đề thuế trong quá khứ",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "IRS bị cấm điều tra ông Trump và gia đình về vấn đề thuế trong quá khứ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vụ kiện khiến chính trường Mỹ dậy sóng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tranh cãi việc chính quyền ông Trump lập quỹ tiền tỉ bồi thường cho đồng minh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump khoe công trường phòng khiêu vũ 400 triệu USD, khẳng định 'tiền tôi chi'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump rút kiện IRS, đổi lấy quỹ 1,76 tỉ USD và lời xin lỗi chính thức",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "IRS bị cấm điều tra ông Trump và gia đình về vấn đề thuế trong quá khứ",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Vụ kiện khiến chính trường Mỹ dậy sóng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Tranh cãi việc chính quyền ông Trump lập quỹ tiền tỉ bồi thường cho đồng minh",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump khoe công trường phòng khiêu vũ 400 triệu USD, khẳng định 'tiền tôi chi'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Ông Trump rút kiện IRS, đổi lấy quỹ 1,76 tỉ USD và lời xin lỗi chính thức",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 21
+    },
+    {
+      "cluster_id": 3,
+      "trend_name": "Lỗ hổng 'đánh gậy' bản quyền trên nền tảng online",
+      "article_count": 4,
+      "trend": "Lỗ hổng 'đánh gậy' bản quyền trên nền tảng online",
+      "keywords": [],
+      "representative_articles": [
+        {
+          "title": "Lỗ hổng 'đánh gậy' bản quyền trên nền tảng online",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nghệ sĩ dính ma túy: Cần một 'lằn ranh đỏ'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nguyễn Văn Chung: Pháp luật vào cuộc vụ bản quyền là một tín hiệu đáng mừng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Khởi tố loạt vụ xâm phạm bản quyền: Cú đánh mạnh vào vấn nạn 'xài chùa'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "articles": [
+        {
+          "title": "Lỗ hổng 'đánh gậy' bản quyền trên nền tảng online",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nghệ sĩ dính ma túy: Cần một 'lằn ranh đỏ'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Nguyễn Văn Chung: Pháp luật vào cuộc vụ bản quyền là một tín hiệu đáng mừng",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        },
+        {
+          "title": "Khởi tố loạt vụ xâm phạm bản quyền: Cú đánh mạnh vào vấn nạn 'xài chùa'",
+          "source": "",
+          "published": "",
+          "url": "",
+          "content": ""
+        }
+      ],
+      "rank": 22
+    }
+  ]
+}
