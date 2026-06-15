@@ -163,6 +163,154 @@ st.markdown(
         overflow: hidden;
     }
 
+
+    .chart-panel {
+        padding: 24px;
+        border-radius: 24px;
+        background: rgba(15,23,42,.62);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        box-shadow: 0 16px 44px rgba(0,0,0,.22);
+        margin-bottom: 26px;
+    }
+
+    .single-result-card {
+        padding: 24px 26px;
+        border-radius: 24px;
+        background:
+            radial-gradient(circle at top left, rgba(56,189,248,.16), transparent 36%),
+            rgba(15,23,42,.76);
+        border: 1px solid rgba(56,189,248,.28);
+        box-shadow: 0 18px 48px rgba(0,0,0,.24);
+        margin-bottom: 26px;
+    }
+
+    .single-result-label {
+        color: #7DD3FC;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    .single-result-title {
+        color: #F8FAFC;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 1.28;
+        margin-bottom: 14px;
+    }
+
+    .single-result-meta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        color: #CBD5E1;
+        font-size: 14px;
+    }
+
+    .mini-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(30,41,59,.82);
+        border: 1px solid rgba(148,163,184,.20);
+    }
+
+    .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 14px;
+        margin-bottom: 24px;
+    }
+
+    .article-card {
+        min-height: 156px;
+        padding: 18px;
+        border-radius: 20px;
+        background:
+            linear-gradient(145deg, rgba(30,41,59,.90), rgba(15,23,42,.90));
+        border: 1px solid rgba(148,163,184,.18);
+        box-shadow: 0 12px 34px rgba(0,0,0,.24);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .article-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(circle at top right, rgba(56,189,248,.20), transparent 34%),
+            radial-gradient(circle at bottom left, rgba(99,102,241,.16), transparent 38%);
+        pointer-events: none;
+    }
+
+    .article-card-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    .article-thumb {
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(14,165,233,.14);
+        border: 1px solid rgba(56,189,248,.30);
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .article-title {
+        color: #F8FAFC;
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 1.42;
+        margin-bottom: 14px;
+    }
+
+    .article-meta {
+        color: #94A3B8;
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .article-open {
+        display: inline-block;
+        color: #7DD3FC !important;
+        text-decoration: none !important;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 8px 11px;
+        border-radius: 999px;
+        background: rgba(14,165,233,.12);
+        border: 1px solid rgba(56,189,248,.30);
+    }
+
+    .article-open:hover {
+        background: rgba(14,165,233,.20);
+    }
+
+    .demo-hint {
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: rgba(14, 165, 233, .10);
+        border: 1px solid rgba(56,189,248,.30);
+        color: #DBEAFE;
+        margin-top: 12px;
+        margin-bottom: 16px;
+        line-height: 1.55;
+    }
+
+    .demo-hint b {
+        color: #F8FAFC;
+    }
+
     hr {
         border-color: rgba(148, 163, 184, 0.2);
     }
@@ -173,6 +321,59 @@ st.markdown(
 
 
 DATA_PATH = Path("trends.json")
+
+
+def get_article_url(article):
+    """Lấy URL từ nhiều schema khác nhau trong trends.json."""
+    if not isinstance(article, dict):
+        return ""
+    return article.get("url") or article.get("link") or article.get("href") or ""
+
+
+def get_article_title(article, fallback="Bài viết"):
+    """Lấy tiêu đề từ nhiều schema khác nhau trong trends.json."""
+    if not isinstance(article, dict):
+        return str(article)
+    return article.get("title") or article.get("headline") or fallback
+
+
+def get_article_source(article):
+    """Lấy nguồn báo, nếu dữ liệu có sẵn."""
+    if not isinstance(article, dict):
+        return ""
+    return article.get("source") or article.get("rss_source") or article.get("domain") or ""
+
+
+def get_article_published(article):
+    """Lấy ngày đăng, nếu dữ liệu có sẵn."""
+    if not isinstance(article, dict):
+        return ""
+    return article.get("published") or article.get("date") or article.get("time") or ""
+
+
+def build_article_table(articles):
+    rows = []
+    for i, article in enumerate(articles, start=1):
+        rows.append(
+            {
+                "STT": i,
+                "Tiêu đề": get_article_title(article, f"Bài viết {i}"),
+                "Ngày đăng": get_article_published(article),
+                "Mở bài gốc": get_article_url(article),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def render_link_list(articles, max_items=5):
+    for i, article in enumerate(articles[:max_items], start=1):
+        title = get_article_title(article, f"Bài viết {i}")
+        url = get_article_url(article)
+        if url:
+            st.markdown(f"{i}. [{title}]({url})")
+        else:
+            st.markdown(f"{i}. {title}")
+
 
 
 @st.cache_data(show_spinner=False)
@@ -330,41 +531,66 @@ if chart_df.empty:
     st.warning("Không có xu hướng nào khớp với bộ lọc hiện tại.")
     st.stop()
 
-fig = px.bar(
-    chart_df.sort_values("article_count", ascending=True),
-    x="article_count",
-    y="trend_name",
-    orientation="h",
-    text="article_count",
-    color="article_count",
-    color_continuous_scale="Blues",
-)
+if len(chart_df) == 1:
+    row = chart_df.iloc[0]
 
-fig.update_traces(
-    textposition="outside",
-    marker_line_width=0,
-    hovertemplate="<b>%{y}</b><br>Số bài viết: %{x}<extra></extra>",
-)
+    st.markdown(
+        f"""
+        <div class="single-result-card">
+            <div class="single-result-label">Kết quả nổi bật khi lọc dữ liệu</div>
+            <div class="single-result-title">{row['trend_name']}</div>
+            <div class="single-result-meta">
+                <span class="mini-chip">📌 Xếp hạng #{row['rank']}</span>
+                <span class="mini-chip">🧩 Cụm {row['cluster_id']}</span>
+                <span class="mini-chip">📰 {row['article_count']} bài viết</span>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-fig.update_layout(
-    height=max(440, 34 * len(chart_df) + 140),
-    margin=dict(l=20, r=40, t=20, b=20),
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(15,23,42,0.35)",
-    font=dict(color="#E5E7EB", size=13),
-    xaxis=dict(
-        title="Số lượng bài viết",
-        gridcolor="rgba(148,163,184,.16)",
-        zeroline=False,
-    ),
-    yaxis=dict(
-        title="",
-        gridcolor="rgba(148,163,184,.05)",
-    ),
-    coloraxis_showscale=False,
-)
+else:
+    fig = px.bar(
+        chart_df.sort_values("article_count", ascending=True),
+        x="article_count",
+        y="trend_name",
+        orientation="h",
+        text="article_count",
+        color="article_count",
+        color_continuous_scale="Blues",
+    )
 
-st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+    fig.update_traces(
+        textposition="outside",
+        marker_line_width=0,
+        hovertemplate="<b>%{y}</b><br>Số bài viết: %{x}<extra></extra>",
+        cliponaxis=False,
+    )
+
+    fig.update_layout(
+        height=max(360, 38 * len(chart_df) + 90),
+        margin=dict(l=12, r=52, t=12, b=28),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(15,23,42,0.22)",
+        font=dict(color="#E5E7EB", size=13),
+        xaxis=dict(
+            title="Số lượng bài viết",
+            gridcolor="rgba(148,163,184,.13)",
+            zeroline=False,
+        ),
+        yaxis=dict(
+            title="",
+            gridcolor="rgba(148,163,184,.04)",
+            automargin=True,
+            tickfont=dict(size=12),
+        ),
+        coloraxis_showscale=False,
+        bargap=0.30,
+    )
+
+    st.markdown('<div class="chart-panel">', unsafe_allow_html=True)
+    st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 # =========================================================
@@ -389,7 +615,7 @@ with left:
         }
     )
 
-    st.dataframe(display_df, use_container_width=True, hide_index=True, height=420)
+    st.dataframe(display_df, width="stretch", hide_index=True, height=420)
 
 with right:
     best = filtered_df.sort_values("article_count", ascending=False).head(3)
@@ -464,49 +690,61 @@ representative_articles = selected_trend.get("representative_articles", [])
 if representative_articles:
     st.markdown("#### Bài viết đại diện")
 
-    for i, article in enumerate(representative_articles, start=1):
-        title = article.get("title", f"Bài viết {i}") if isinstance(article, dict) else str(article)
-        url = article.get("url", "") if isinstance(article, dict) else ""
+    st.markdown(
+        """
+        <div class="demo-hint">
+            🔎 <b>Gợi ý demo:</b> bấm vào nút dưới từng bài để mở bài gốc.
+            Các bài đại diện giúp chứng minh hệ thống gom theo ngữ nghĩa, không chỉ match từ khóa.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-        if url:
-            st.markdown(f"{i}. [{title}]({url})")
-        else:
-            st.markdown(f"{i}. {title}")
+    rep_cols = st.columns(min(3, len(representative_articles)))
+
+    for i, article in enumerate(representative_articles[:6], start=1):
+        title = get_article_title(article, f"Bài viết {i}")
+        url = get_article_url(article)
+        published = get_article_published(article)
+
+        with rep_cols[(i - 1) % len(rep_cols)]:
+            with st.container(border=True):
+                st.markdown("📰")
+                st.markdown(f"**{title}**")
+                if published:
+                    st.caption(published)
+                else:
+                    st.caption("Bài đại diện")
+
+                if url:
+                    st.link_button("🔗 Mở bài gốc", url, use_container_width=True)
+                else:
+                    st.caption("Không có link bài gốc")
 
 
 all_articles = selected_trend.get("articles", selected_trend.get("all_articles", []))
-article_rows = []
 
-for i, article in enumerate(all_articles, start=1):
-    if isinstance(article, dict):
-        article_rows.append(
-            {
-                "STT": i,
-                "Tiêu đề": article.get("title", ""),
-                "Nguồn": article.get("source", ""),
-                "Ngày đăng": article.get("published", article.get("date", "")),
-                "Liên kết": article.get("url", article.get("link", "")),
-            }
-        )
-    else:
-        article_rows.append(
-            {
-                "STT": i,
-                "Tiêu đề": str(article),
-                "Nguồn": "",
-                "Ngày đăng": "",
-                "Liên kết": "",
-            }
-        )
-
-if article_rows:
+if all_articles:
     st.markdown("#### Tất cả bài viết trong cụm")
 
+    article_df = build_article_table(all_articles)
+
     st.dataframe(
-        pd.DataFrame(article_rows),
-        use_container_width=True,
+        article_df,
+        width="stretch",
         hide_index=True,
-        height=360,
+        height=420,
+        column_config={
+            "STT": st.column_config.NumberColumn("STT", width="small"),
+            "Tiêu đề": st.column_config.TextColumn("Tiêu đề", width="large"),
+            "Ngày đăng": st.column_config.TextColumn("Ngày đăng", width="medium"),
+            "Mở bài gốc": st.column_config.LinkColumn(
+                "Mở bài gốc",
+                display_text="🔗 Mở bài",
+                help="Click để mở bài báo gốc trong tab mới",
+                width="small",
+            ),
+        },
     )
 
 
