@@ -4,6 +4,7 @@ from pathlib import Path
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from datetime import datetime
 
 
 st.set_page_config(
@@ -365,17 +366,6 @@ def build_article_table(articles):
     return pd.DataFrame(rows)
 
 
-def render_link_list(articles, max_items=5):
-    for i, article in enumerate(articles[:max_items], start=1):
-        title = get_article_title(article, f"Bài viết {i}")
-        url = get_article_url(article)
-        if url:
-            st.markdown(f"{i}. [{title}]({url})")
-        else:
-            st.markdown(f"{i}. {title}")
-
-
-
 @st.cache_data(show_spinner=False)
 def load_payload(path: str):
     with open(path, "r", encoding="utf-8") as f:
@@ -406,10 +396,10 @@ if not trends:
 # =========================================================
 # Chuẩn hóa dữ liệu
 # =========================================================
-rows = []
+trend_rows = []
 
 for i, trend in enumerate(trends, start=1):
-    rows.append(
+    trend_rows.append(
         {
             "rank": int(trend.get("rank", i)),
             "cluster_id": trend.get("cluster_id", ""),
@@ -421,7 +411,7 @@ for i, trend in enumerate(trends, start=1):
         }
     )
 
-trend_df = pd.DataFrame(rows)
+trend_df = pd.DataFrame(trend_rows)
 
 
 # =========================================================
@@ -512,9 +502,144 @@ with st.expander("Thông tin mô hình và xử lý dữ liệu", expanded=False
     m1.metric("Mô hình Embedding", model_info.get("embedding_model", "N/A"))
     m2.metric("Mô hình LLM", model_info.get("llm_model", "N/A"))
     m3.metric("Quantization", model_info.get("quantization", "N/A"))
-    m4.metric("Độ liên kết cụm", metrics.get("weighted_coherence", "N/A"))
+    m4.metric("Độ liên kết cụm", f"{metrics['weighted_coherence']:.3f}" if "weighted_coherence" in metrics else "N/A")
 
-    st.caption(f"Thời điểm tạo dữ liệu: {generated_at if generated_at else 'N/A'}")
+    st.caption(f"Thời điểm tạo dữ liệu: {datetime.fromisoformat(generated_at).strftime('%Y-%m-%d %H:%M:%S') if generated_at else 'N/A'}")
+
+# =========================================================
+# UMAP plot
+# =========================================================
+
+st.markdown(
+    '<div class="section-title">Biểu đồ UMAP các cụm xu hướng</div>',
+    unsafe_allow_html=True,
+)
+
+def plot_umap(trends):
+    if not trends or not any("articles" in t and any("umap_x" in a and "umap_y" in a for a in t["articles"]) for t in trends):
+        st.warning("Dữ liệu không có thông tin UMAP để hiển thị biểu đồ.")
+        return
+
+    umap_df = pd.DataFrame(
+        [
+            {
+                "cluster_id": str(trend.get("cluster_id", "")),
+                "title": get_article_title(article, "Bài viết"),
+                "source": get_article_source(article),
+                "published": get_article_published(article),
+                "article_count": int(trend.get("article_count", trend.get("num_articles", 0)) or 0),
+                "umap_x": article.get("umap_x"),
+                "umap_y": article.get("umap_y"),
+            }
+            for trend in trends
+            for article in trend.get("articles", [])
+            if isinstance(article, dict) and "umap_x" in article and "umap_y" in article
+        ]
+    )
+
+    fig = px.scatter(
+        umap_df,
+        x="umap_x",
+        y="umap_y",
+        color="cluster_id",
+        color_discrete_sequence=px.colors.qualitative.Alphabet,
+        hover_name="title",
+        hover_data={
+            "source": True,
+            "published": True,
+            "cluster_id": True,
+        },
+    )
+
+    fig.update_traces(
+        marker=dict(
+            size=5,
+            opacity=0.7,
+            line=dict(width=0),
+        )
+    )
+
+    fig.update_layout(
+        height=700,
+        coloraxis_showscale=False,
+    )
+
+    fig.update_yaxes(
+        scaleanchor="x",
+        scaleratio=1,
+    )
+
+    st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+
+plot_umap(trends)
+
+heatmap_rows = []
+
+for trend in trends:
+    for article in trend["articles"]:
+        heatmap_rows.append({
+            "cluster_id": trend["cluster_id"],
+            "source": article.get("source", "Unknown")
+        })
+
+heatmap_df = pd.pivot_table(
+    pd.DataFrame(heatmap_rows),
+    index="cluster_id",
+    columns="source",
+    aggfunc="size",
+    fill_value=0
+)
+
+cluster_to_name = {
+    trend["cluster_id"]: trend["trend_name"][:80]
+    for trend in trends
+}
+
+cluster_order = (
+    trend_df
+    .sort_values("article_count", ascending=False)
+    ["cluster_id"]
+    .head(20)
+)
+
+heatmap_df = heatmap_df.reindex(
+    cluster_order,
+    fill_value=0
+)
+
+heatmap_df = heatmap_df.reindex(cluster_order)
+
+heatmap_df.index = [
+    cluster_to_name[c]
+    for c in heatmap_df.index
+]
+
+fig = px.imshow(
+    heatmap_df,
+    color_continuous_scale="Viridis",
+    aspect="auto",
+    labels={
+        "x": "Nguồn",
+        "y": "Tên xu hướng",
+        "color": "Số bài viết"
+    }
+)
+
+fig.update_layout(
+    height=700,
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(15,23,42,.35)",
+    font=dict(color="#E5E7EB"),
+)
+
+fig.update_traces(
+    hovertemplate=
+    "Trend: %{y}<br>"
+    "Source: %{x}<br>"
+    "Articles: %{z}<extra></extra>"
+)
+
+st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
 
 
 # =========================================================
@@ -588,10 +713,7 @@ else:
         bargap=0.30,
     )
 
-    st.markdown('<div class="chart-panel">', unsafe_allow_html=True)
     st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
-    st.markdown('</div>', unsafe_allow_html=True)
-
 
 # =========================================================
 # Danh sách xu hướng
@@ -737,7 +859,7 @@ if all_articles:
         column_config={
             "STT": st.column_config.NumberColumn("STT", width="small"),
             "Tiêu đề": st.column_config.TextColumn("Tiêu đề", width="large"),
-            "Ngày đăng": st.column_config.TextColumn("Ngày đăng", width="medium"),
+            "Ngày đăng": st.column_config.DatetimeColumn("Ngày đăng", width="medium"),
             "Mở bài gốc": st.column_config.LinkColumn(
                 "Mở bài gốc",
                 display_text="🔗 Mở bài",
@@ -747,6 +869,40 @@ if all_articles:
         },
     )
 
+    st.markdown('### Biểu đồ phân bố nguồn bài viết')
+
+    source_df = pd.DataFrame(
+        [
+            {
+                "Nguồn": article.get("source", "Unknown")
+            }
+            for article in all_articles
+        ]
+    )
+
+    source_count = (
+        source_df
+        .value_counts("Nguồn")
+        .reset_index(name="Số bài viết")
+    )
+
+    fig = px.bar(
+        source_count,
+        x="Số bài viết",
+        y="Nguồn",
+        orientation="h",
+    )
+
+    fig.update_traces(
+        textposition="outside",
+        marker_line_width=0,
+        hovertemplate="<b>%{y}</b><br>Số bài viết: %{x}<extra></extra>",
+        cliponaxis=False,
+    )
+
+    st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+
 
 st.markdown("---")
 st.caption("IT4930 - News Trend Detection | Semester 2025.2")
+
