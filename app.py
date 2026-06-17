@@ -20,7 +20,6 @@ from components.trend_detail import render_trend_detail
 
 DATA_PATH = Path("trends.json")
 MAX_TREND_NAME_LENGTH = 100
-TOP_CLUSTER = 20
 TABLE_HEIGHT = 420
 UMAP_HEIGHT = 700
 HEATMAP_HEIGHT = 700
@@ -98,7 +97,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-plot_heatmap(trends, trend_df, MAX_TREND_NAME_LENGTH, TOP_CLUSTER, HEATMAP_HEIGHT)
+plot_heatmap(trends, trend_df, filters, MAX_TREND_NAME_LENGTH, HEATMAP_HEIGHT)
 
 # =========================================================
 # Chart

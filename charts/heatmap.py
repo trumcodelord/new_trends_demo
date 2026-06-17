@@ -46,8 +46,8 @@ def build_heatmap_df(trends, trend_df, max_trend_name_length, top_cluster):
 
     return heatmap_df
 
-def plot_heatmap(trends, trend_df, max_trend_name_length, top_cluster, heatmap_height):
-    heatmap_df = build_heatmap_df(trends, trend_df, max_trend_name_length, top_cluster)
+def plot_heatmap(trends, trend_df, filters, max_trend_name_length, heatmap_height):
+    heatmap_df = build_heatmap_df(trends, trend_df, max_trend_name_length, filters["top_n"])
 
     fig = px.imshow(
         heatmap_df,
