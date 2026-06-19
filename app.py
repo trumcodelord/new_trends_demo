@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import streamlit as st
+from streamlit_theme import st_theme
 
 from data.loader import load_payload
 from utils.preprocess import build_trend_dataframe
@@ -41,11 +42,20 @@ if not DATA_PATH.exists():
 # =========================================================
 # CSS
 # =========================================================
-with open("assets/style.css") as f:
-    st.markdown(
-        f"<style>{f.read()}</style>",
-        unsafe_allow_html=True,
-    )
+theme = st_theme()
+
+if theme and theme["base"] == "light":
+    with open("assets/style_light_mode.css") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True,
+        )
+else:
+    with open("assets/style_dark_mode.css") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True,
+        )
 
 
 trends, metrics, model_info, generated_at = load_payload(str(DATA_PATH))

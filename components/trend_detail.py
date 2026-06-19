@@ -64,16 +64,6 @@ def render_representative_articles(representative_articles):
 
     st.markdown("#### Bài viết đại diện")
 
-    st.markdown(
-        """
-        <div class="demo-hint">
-            🔎 <b>Gợi ý demo:</b> bấm vào nút dưới từng bài để mở bài gốc.
-            Các bài đại diện giúp chứng minh hệ thống gom theo ngữ nghĩa, không chỉ match từ khóa.
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
     rep_cols = st.columns(min(3, len(representative_articles)))
 
     for i, article in enumerate(representative_articles[:6], start=1):

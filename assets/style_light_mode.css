@@ -1,0 +1,293 @@
+.stApp {
+    background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 45%, #E2E8F0 100%);
+    color: #1E293B;
+}
+
+section[data-testid="stSidebar"] {
+    background: #F8FAFC;
+    border-right: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.block-container {
+    padding-top: 2.1rem;
+    padding-bottom: 3rem;
+    max-width: 1320px;
+}
+
+.hero {
+    padding: 28px 32px;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at top left, rgba(14,165,233,.12), transparent 32%),
+        linear-gradient(135deg, rgba(255,255,255,.96), rgba(241,245,249,.96));
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    box-shadow: 0 20px 60px rgba(15,23,42,.08);
+    margin-bottom: 22px;
+}
+
+.hero-title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin: 0;
+    color: #0F172A;
+}
+
+.hero-subtitle {
+    margin-top: 12px;
+    color: #475569;
+    font-size: 16px;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(14, 165, 233, .10);
+    border: 1px solid rgba(14,165,233,.25);
+    color: #0369A1;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.metric-card {
+    padding: 20px 22px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.92);
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    box-shadow: 0 14px 32px rgba(15,23,42,.06);
+    min-height: 120px;
+}
+
+.metric-label {
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.metric-value {
+    color: #0F172A;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-top: 10px;
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 26px;
+    font-weight: 900;
+    color: #0F172A;
+    letter-spacing: -0.03em;
+}
+
+.trend-card {
+    padding: 22px 24px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.95);
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    box-shadow: 0 14px 36px rgba(15,23,42,.06);
+    margin-bottom: 16px;
+}
+
+.trend-rank {
+    color: #0284C7;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.trend-title {
+    color: #0F172A;
+    font-size: 22px;
+    font-weight: 850;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.trend-meta {
+    color: #64748B;
+    font-size: 14px;
+}
+
+div[data-testid="stMetric"] {
+    background: rgba(255,255,255,.92);
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #0F172A;
+    font-weight: 900;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #475569;
+    font-weight: 700;
+}
+
+.stDataFrame {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.chart-panel {
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.9);
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    box-shadow: 0 16px 44px rgba(15,23,42,.06);
+    margin-bottom: 26px;
+}
+
+.single-result-card {
+    padding: 24px 26px;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at top left, rgba(14,165,233,.10), transparent 36%),
+        rgba(255,255,255,.96);
+    border: 1px solid rgba(14,165,233,.22);
+    box-shadow: 0 18px 48px rgba(15,23,42,.08);
+    margin-bottom: 26px;
+}
+
+.single-result-label {
+    color: #0284C7;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.single-result-title {
+    color: #0F172A;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.28;
+    margin-bottom: 14px;
+}
+
+.single-result-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #475569;
+    font-size: 14px;
+}
+
+.mini-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(241,245,249,.95);
+    border: 1px solid rgba(203,213,225,.9);
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 14px;
+    margin-bottom: 24px;
+}
+
+.article-card {
+    min-height: 156px;
+    padding: 18px;
+    border-radius: 20px;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.98), rgba(248,250,252,.98));
+    border: 1px solid rgba(203,213,225,.9);
+    box-shadow: 0 12px 34px rgba(15,23,42,.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.article-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(14,165,233,.12), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(99,102,241,.08), transparent 38%);
+    pointer-events: none;
+}
+
+.article-card-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.article-thumb {
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(14,165,233,.10);
+    border: 1px solid rgba(14,165,233,.25);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.article-title {
+    color: #0F172A;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.42;
+    margin-bottom: 14px;
+}
+
+.article-meta {
+    color: #64748B;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+.article-open {
+    display: inline-block;
+    color: #0369A1 !important;
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: rgba(14,165,233,.10);
+    border: 1px solid rgba(14,165,233,.25);
+}
+
+.article-open:hover {
+    background: rgba(14,165,233,.16);
+}
+
+.demo-hint {
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(14, 165, 233, .08);
+    border: 1px solid rgba(14,165,233,.22);
+    color: #334155;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    line-height: 1.55;
+}
+
+.demo-hint b {
+    color: #0F172A;
+}
+
+hr {
+    border-color: rgba(203, 213, 225, 0.9);
+}
