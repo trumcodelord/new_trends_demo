@@ -51,7 +51,7 @@ def plot_heatmap(trends, trend_df, filters, max_trend_name_length, heatmap_heigh
 
     fig = px.imshow(
         heatmap_df,
-        color_continuous_scale="Viridis",
+        color_continuous_scale="Blues",
         aspect="auto",
         labels={
             "x": "Nguồn",
