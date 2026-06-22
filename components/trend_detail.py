@@ -111,6 +111,7 @@ def render_article_table(all_articles, table_height):
         },
     )
 
+def render_source_distribution_plot(all_articles):
     st.markdown('### Biểu đồ phân bố nguồn bài viết')
 
     source_df = pd.DataFrame(
@@ -144,6 +145,48 @@ def render_article_table(all_articles, table_height):
 
     st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
 
+def render_trend_timeline_plot(all_articles):
+    st.markdown("### Biểu đồ số bài viết theo ngày (timeline): ")
+
+    timeline_df = pd.DataFrame(
+        [
+            {
+                "Ngày đăng": article["published"]
+            }
+            for article in all_articles if "published" in article
+        ]
+    )
+
+    timeline_df["Ngày đăng"] = pd.to_datetime(
+        timeline_df["Ngày đăng"],
+        utc=True,
+        errors="coerce",
+    )
+
+    timeline = (
+        timeline_df
+        .groupby(
+            timeline_df["Ngày đăng"].dt.date
+        )
+        .size()
+        .reset_index(name="count")
+    )
+
+    fig = px.line(
+        timeline,
+        x="Ngày đăng",
+        y="count",
+        markers=True,
+    )
+
+    fig.update_layout(
+        font=dict(color="#E5E7EB"),
+        xaxis_title="Ngày",
+        yaxis_title="Số bài viết",
+    )
+
+    st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+
 def render_trend_detail(
     trends,
     filtered_df,
@@ -163,3 +206,5 @@ def render_trend_detail(
 
     all_articles = selected_trend.get("articles", selected_trend.get("all_articles", []))
     render_article_table(all_articles, table_height)
+    render_source_distribution_plot(all_articles)
+    render_trend_timeline_plot(all_articles)

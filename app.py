@@ -11,6 +11,7 @@ from components.header import render_header
 from components.metrics import render_metrics
 
 from charts.umap import plot_umap
+from charts.scatter_plot import plot_scatter
 from charts.heatmap import plot_heatmap
 from charts.trend_bar import plot_trend_bar
 
@@ -24,7 +25,7 @@ MAX_TREND_NAME_LENGTH = 100
 TABLE_HEIGHT = 420
 UMAP_HEIGHT = 700
 HEATMAP_HEIGHT = 700
-
+SCATTER_HEIGHT = 700
 
 
 st.set_page_config(
@@ -108,6 +109,17 @@ st.markdown(
 )
 
 plot_heatmap(trends, trend_df, filters, MAX_TREND_NAME_LENGTH, HEATMAP_HEIGHT)
+
+# =========================================================
+# Scatter plot
+# =========================================================
+
+st.markdown(
+    '<div class="section-title">Biểu đồ phân tán các cụm xu hướng</div>',
+    unsafe_allow_html=True,
+)
+
+plot_scatter(trends, SCATTER_HEIGHT)
 
 # =========================================================
 # Chart
