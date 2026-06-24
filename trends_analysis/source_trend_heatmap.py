@@ -1,8 +1,9 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import numpy as np
 
-def build_heatmap_df(trends, trend_df, max_trend_name_length, top_cluster):
+def build_heatmap_df(trends, trend_df, top_cluster):
     heatmap_rows = []
 
     for trend in trends:
@@ -20,10 +21,10 @@ def build_heatmap_df(trends, trend_df, max_trend_name_length, top_cluster):
         fill_value=0
     )
 
-    cluster_to_name = {
-        trend["cluster_id"]: trend["trend_name"][:max_trend_name_length]
-        for trend in trends
-    }
+    cluster_to_short_name = (
+        trend_df.set_index("cluster_id")["shorten_trend_name"]
+        .to_dict()
+    )
 
     cluster_order = (
         trend_df
@@ -37,17 +38,34 @@ def build_heatmap_df(trends, trend_df, max_trend_name_length, top_cluster):
         fill_value=0
     )
 
-    heatmap_df = heatmap_df.reindex(cluster_order)
-
     heatmap_df.index = [
-        cluster_to_name[c]
+        cluster_to_short_name[c]
         for c in heatmap_df.index
     ]
 
     return heatmap_df
 
-def plot_heatmap(trends, trend_df, filters, max_trend_name_length, heatmap_height):
-    heatmap_df = build_heatmap_df(trends, trend_df, max_trend_name_length, filters["top_n"])
+def plot_source_trend_heatmap(trends, trend_df, filters, heatmap_height):
+    st.markdown(
+        '<div class="section-title">Biểu đồ Heatmap các cụm xu hướng</div>',
+        unsafe_allow_html=True,
+    )
+
+    heatmap_df = build_heatmap_df(
+        trends,
+        trend_df,
+        filters["top_n"]
+    )
+
+    short_to_full = (
+        trend_df.set_index("shorten_trend_name")["trend_name"]
+        .to_dict()
+    )
+
+    customdata = np.empty(heatmap_df.shape, dtype=object)
+
+    for i, short_name in enumerate(heatmap_df.index):
+        customdata[i, :] = short_to_full.get(short_name, short_name)
 
     fig = px.imshow(
         heatmap_df,
@@ -68,10 +86,11 @@ def plot_heatmap(trends, trend_df, filters, max_trend_name_length, heatmap_heigh
     )
 
     fig.update_traces(
+        customdata=customdata,
         hovertemplate=
-        "Trend: %{y}<br>"
-        "Source: %{x}<br>"
-        "Articles: %{z}<extra></extra>"
+        "<b>Xu hướng:</b> %{customdata}<br>"
+        "<b>Nguồn báo:</b> %{x}<br>"
+        "<b>Số bài báo:</b> %{z}<extra></extra>"
     )
 
     st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})

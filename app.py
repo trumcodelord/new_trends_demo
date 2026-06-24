@@ -4,24 +4,28 @@ import streamlit as st
 from streamlit_theme import st_theme
 
 from data.loader import load_payload
-from utils.preprocess import build_trend_dataframe
+from data.preprocess import build_trend_dataframe, build_article_dataframe
 
-from components.sidebar import render_sidebar, filter_trends
-from components.header import render_header
-from components.metrics import render_metrics
+from general.sidebar import render_sidebar, filter_trends
+from general.header import render_header
+from general.metrics import render_metrics
 
-from charts.umap import plot_umap
-from charts.scatter_plot import plot_scatter
-from charts.heatmap import plot_heatmap
-from charts.trend_bar import plot_trend_bar
+from dataset_overview.dataset_overview import render_dataset_overview
 
-from components.trend_table import render_trend_table
-from components.trend_detail import render_trend_detail
+from eda_analysis.eda_analysis import render_eda_analysis
+
+from embedding_anslysis.embedding_umap import plot_umap
+
+from trends_analysis.trend_size_coherence_scatter_plot import plot_trend_size_scatter
+from trends_analysis.source_trend_heatmap import plot_source_trend_heatmap
+from trends_analysis.trend_size_bar_chart import plot_trend_size_bar_chart
+
+from trends_analysis.trend_table import render_trend_table
+from trend_detail_analysis.trend_detail import render_trend_detail
 
 
 
 DATA_PATH = Path("trends.json")
-MAX_TREND_NAME_LENGTH = 100
 TABLE_HEIGHT = 420
 UMAP_HEIGHT = 700
 HEATMAP_HEIGHT = 700
@@ -70,6 +74,7 @@ if not trends:
 # Chuẩn hóa dữ liệu
 # =========================================================
 trend_df = build_trend_dataframe(trends)
+article_df = build_article_dataframe(trends)
 
 # =========================================================
 # Sidebar
@@ -88,57 +93,50 @@ render_header()
 
 render_metrics(trends, metrics, model_info, generated_at)
 
-# =========================================================
-# UMAP plot
-# =========================================================
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Tổng quan dữ liệu", "Phân tích EDA", "Phân tích embedding", "Phân tích cụm", "Phân tích chi tiết cụm"])
 
-st.markdown(
-    '<div class="section-title">Biểu đồ UMAP các cụm xu hướng</div>',
-    unsafe_allow_html=True,
-)
+with tab1:
+    render_dataset_overview(article_df, metrics)
 
-plot_umap(trends, UMAP_HEIGHT)
+with tab2:
+    render_eda_analysis(article_df)
 
-# =========================================================
-# Heatmap plot
-# =========================================================
+with tab3:
+    # =========================================================
+    # UMAP plot
+    # =========================================================
+    plot_umap(trends, UMAP_HEIGHT)
 
-st.markdown(
-    '<div class="section-title">Biểu đồ Heatmap các cụm xu hướng</div>',
-    unsafe_allow_html=True,
-)
+with tab4:
+    # =========================================================
+    # Heatmap plot
+    # =========================================================
+    plot_source_trend_heatmap(trends, trend_df, filters, HEATMAP_HEIGHT)
 
-plot_heatmap(trends, trend_df, filters, MAX_TREND_NAME_LENGTH, HEATMAP_HEIGHT)
+    # =========================================================
+    # Scatter plot
+    # =========================================================
+    plot_trend_size_scatter(trends, SCATTER_HEIGHT)
 
-# =========================================================
-# Scatter plot
-# =========================================================
+    # =========================================================
+    # Chart
+    # =========================================================
+    plot_trend_size_bar_chart(filtered_df, filters)
 
-st.markdown(
-    '<div class="section-title">Biểu đồ phân tán các cụm xu hướng</div>',
-    unsafe_allow_html=True,
-)
+    # =========================================================
+    # Danh sách xu hướng
+    # =========================================================
+    render_trend_table(filtered_df, TABLE_HEIGHT)
 
-plot_scatter(trends, SCATTER_HEIGHT)
-
-# =========================================================
-# Chart
-# =========================================================
-plot_trend_bar(filtered_df, filters)
-
-# =========================================================
-# Danh sách xu hướng
-# =========================================================
-render_trend_table(filtered_df, TABLE_HEIGHT)
-
-# =========================================================
-# Chi tiết xu hướng
-# =========================================================
-render_trend_detail(
-    trends,
-    filtered_df,
-    TABLE_HEIGHT
-)
+with tab5:
+    # =========================================================
+    # Chi tiết xu hướng
+    # =========================================================
+    render_trend_detail(
+        trends,
+        filtered_df,
+        TABLE_HEIGHT
+    )
 
 
 st.markdown("---")

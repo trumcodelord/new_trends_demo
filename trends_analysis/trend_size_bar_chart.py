@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 
-def plot_trend_bar(filtered_df, filters):
+def plot_trend_size_bar_chart(filtered_df, filters):
     st.markdown(
         '<div class="section-title">Top xu hướng theo số lượng bài viết</div>',
         unsafe_allow_html=True,
@@ -37,17 +37,21 @@ def plot_trend_bar(filtered_df, filters):
         fig = px.bar(
             chart_df.sort_values("article_count", ascending=True),
             x="article_count",
-            y="trend_name",
+            y="shorten_trend_name",
             orientation="h",
             text="article_count",
             color="article_count",
             color_continuous_scale="Blues",
+            custom_data=["trend_name"]
         )
 
         fig.update_traces(
             textposition="outside",
             marker_line_width=0,
-            hovertemplate="<b>%{y}</b><br>Số bài viết: %{x}<extra></extra>",
+            hovertemplate=(
+                "<b>%{customdata[0]}</b><br>"
+                "<b>Số bài viết:</b> %{x}<extra></extra>"
+            ),
             cliponaxis=False,
         )
 

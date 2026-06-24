@@ -3,3 +3,5 @@ st-theme
 pandas
 plotly
 openpyxl
+underthesea
+wordcloud

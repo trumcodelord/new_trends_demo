@@ -2,9 +2,12 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from utils.article import get_article_title, get_article_source, get_article_published
-
 def plot_umap(trends, umap_height):
+    st.markdown(
+       '<div class="section-title">Biểu đồ UMAP các cụm xu hướng</div>',
+       unsafe_allow_html=True,
+    )
+       
     if not trends or not any("articles" in t and any("umap_x" in a and "umap_y" in a for a in t["articles"]) for t in trends):
         st.warning("Dữ liệu không có thông tin UMAP để hiển thị biểu đồ.")
         return
@@ -13,9 +16,9 @@ def plot_umap(trends, umap_height):
         [
             {
                 "cluster_id": str(trend.get("cluster_id", "")),
-                "title": get_article_title(article, "Bài viết"),
-                "source": get_article_source(article),
-                "published": get_article_published(article),
+                "title": article.get("title", "Bài viết"),
+                "source": article.get("source", ""),
+                "published": article.get("published", ""),
                 "article_count": int(trend.get("article_count", trend.get("num_articles", 0)) or 0),
                 "umap_x": article.get("umap_x"),
                 "umap_y": article.get("umap_y"),
@@ -38,6 +41,7 @@ def plot_umap(trends, umap_height):
             "published": True,
             "cluster_id": True,
         },
+        render_mode="svg"
     )
 
     fig.update_traces(

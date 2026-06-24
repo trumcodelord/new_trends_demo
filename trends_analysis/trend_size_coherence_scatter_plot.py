@@ -3,7 +3,13 @@ import plotly.express as px
 import streamlit as st
 
 
-def plot_scatter(trends, scatter_height):
+def plot_trend_size_scatter(trends, scatter_height):
+    st.markdown(
+        '<div class="section-title">Biểu đồ phân tán các cụm xu hướng</div>',
+        unsafe_allow_html=True,
+    )
+
+
     quality_df = pd.DataFrame(
         [
             {
@@ -24,9 +30,11 @@ def plot_scatter(trends, scatter_height):
         hover_name="trend_name",
         color="rank",
         labels={
-            "article_count": "Số bài viết",
-            "coherence": "Độ gắn kết cụm"
-        }
+            "rank": "<b>Xếp hạng</b>",
+            "article_count": "<b>Số bài viết</b>",
+            "coherence": "<b>Độ gắn kết cụm</b>"
+        },
+        render_mode="svg"
     )
 
     fig.update_coloraxes(
