@@ -44,7 +44,7 @@ def plot_trend_size_scatter(trends, scatter_height):
     fig.add_hline(
         y=0.8,
         line_dash="dash",
-        annotation_text="Good coherence"
+        annotation_text="Gắn kết cao"
     )
 
     fig.add_vline(
