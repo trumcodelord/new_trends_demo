@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def render_sidebar(trend_df):
 
     st.sidebar.markdown("## 🧭 Bộ lọc")
@@ -34,14 +35,29 @@ def render_sidebar(trend_df):
         "top_n": top_n,
     }
 
-def filter_trends(trend_df, filters):
+
+def filter_trends(trend_df, filters, article_df=None):
     filtered_df = trend_df[trend_df["article_count"] >= filters["min_articles"]].copy()
 
-    if filters["search_text"]:
-        q = filters["search_text"].lower()
-        filtered_df = filtered_df[
-            filtered_df["trend_name"].str.lower().str.contains(q, na=False)
-            | filtered_df["keywords"].str.lower().str.contains(q, na=False)
-        ]
+    search_text = filters.get("search_text")
+    if search_text:
+        q = search_text.lower().strip()
+
+        mask_trend = (
+            filtered_df["trend_name"].fillna("").str.lower().str.contains(q, na=False, regex=False)
+            | filtered_df["keywords"].fillna("").str.lower().str.contains(q, na=False, regex=False)
+        )
+
+        if article_df is not None and len(article_df):
+            title_mask = article_df.get("title", "").fillna("").str.lower().str.contains(q, na=False, regex=False)
+            desc_mask = article_df.get("description", "").fillna("").str.lower().str.contains(q, na=False, regex=False)
+            content_mask = article_df.get("content", "").fillna("").str.lower().str.contains(q, na=False, regex=False) if "content" in article_df.columns else False
+
+            matched_cluster_ids = article_df[title_mask | desc_mask | content_mask]["cluster_id"].unique()
+            mask_article = filtered_df["cluster_id"].isin(matched_cluster_ids)
+
+            filtered_df = filtered_df[mask_trend | mask_article]
+        else:
+            filtered_df = filtered_df[mask_trend]
 
     return filtered_df

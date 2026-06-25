@@ -24,7 +24,6 @@ from trends_analysis.trend_table import render_trend_table
 from trend_detail_analysis.trend_detail import render_trend_detail
 
 
-
 DATA_PATH = Path("trends.json")
 TABLE_HEIGHT = 420
 UMAP_HEIGHT = 700
@@ -50,13 +49,13 @@ if not DATA_PATH.exists():
 theme = st_theme()
 
 if theme and theme["base"] == "light":
-    with open("assets/style_light_mode.css") as f:
+    with open("assets/style_light_mode.css", encoding="utf-8") as f:
         st.markdown(
             f"<style>{f.read()}</style>",
             unsafe_allow_html=True,
         )
 else:
-    with open("assets/style_dark_mode.css") as f:
+    with open("assets/style_dark_mode.css", encoding="utf-8") as f:
         st.markdown(
             f"<style>{f.read()}</style>",
             unsafe_allow_html=True,
@@ -83,7 +82,8 @@ filters = render_sidebar(trend_df)
 
 filtered_df = filter_trends(
     trend_df,
-    filters
+    filters,
+    article_df,
 )
 
 # =========================================================
@@ -93,7 +93,13 @@ render_header()
 
 render_metrics(trends, metrics, model_info, generated_at)
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Tổng quan dữ liệu", "Phân tích EDA", "Phân tích embedding", "Phân tích cụm", "Phân tích chi tiết cụm"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "Tổng quan dữ liệu",
+    "Phân tích EDA",
+    "Phân tích embedding",
+    "Phân tích cụm",
+    "Phân tích chi tiết cụm",
+])
 
 with tab1:
     render_dataset_overview(article_df, metrics)
@@ -135,7 +141,7 @@ with tab5:
     render_trend_detail(
         trends,
         filtered_df,
-        TABLE_HEIGHT
+        TABLE_HEIGHT,
     )
 
 
