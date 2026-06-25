@@ -26,21 +26,41 @@ def render_metrics(trends, metrics, model_info, generated_at):
                 """,
                 unsafe_allow_html=True,
             )
-    
+
     with st.expander("Thông tin mô hình và xử lý dữ liệu", expanded=False):
         m1, m2 = st.columns(2)
 
         m1.metric("Mô hình Embedding", model_info.get("embedding_model", "N/A"))
         m2.metric("Mô hình LLM", model_info.get("llm_model", "N/A"))
 
-        st.caption(f"Thời điểm tạo dữ liệu: {datetime.fromisoformat(generated_at).strftime('%Y-%m-%d %H:%M:%S') if generated_at else 'N/A'}")
+        created_text = (
+            datetime.fromisoformat(generated_at).strftime("%Y-%m-%d %H:%M:%S")
+            if generated_at
+            else "N/A"
+        )
+        st.caption(f"Thời điểm tạo dữ liệu: {created_text}")
 
     with st.expander("Đánh giá kết quả phân cụm", expanded=False):
         m1, m2, m3, m4 = st.columns(4)
 
-        m1.metric("DBCV", f"{metrics["dbcv"]:.4}" if "dbcv" in metrics else "N/A")
-        m2.metric("Davies–Bouldin Index", f"{metrics["davies_bouldin_index"]:.4}" if "davies_bouldin_index" in metrics else "N/A")
-        m3.metric("Silhouette Score", f"{metrics["silhouette_score"]:.4}" if "silhouette_score" in metrics else "N/A")
-        m4.metric("Độ gắn kết cụm", f"{metrics["weighted_coherence"]:.4}" if "weighted_coherence" in metrics else "N/A")
+        m1.metric("DBCV", f"{metrics['dbcv']:.4f}" if "dbcv" in metrics else "N/A")
+        m2.metric(
+            "Davies–Bouldin Index",
+            f"{metrics['davies_bouldin_index']:.4f}"
+            if "davies_bouldin_index" in metrics
+            else "N/A",
+        )
+        m3.metric(
+            "Silhouette Score",
+            f"{metrics['silhouette_score']:.4f}"
+            if "silhouette_score" in metrics
+            else "N/A",
+        )
+        m4.metric(
+            "Độ gắn kết cụm",
+            f"{metrics['weighted_coherence']:.4f}"
+            if "weighted_coherence" in metrics
+            else "N/A",
+        )
 
-        st.caption(f"Thời điểm tạo dữ liệu: {datetime.fromisoformat(generated_at).strftime('%Y-%m-%d %H:%M:%S') if generated_at else 'N/A'}")
+        st.caption(f"Thời điểm tạo dữ liệu: {created_text}")
